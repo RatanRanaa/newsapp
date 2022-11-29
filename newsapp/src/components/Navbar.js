@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
-export class Navbar extends Component {
-  render() {
+const Navbar = (props) => {
+  let time = new Date().toLocaleTimeString()
+  const [times, setTimes] = useState(time)
+  
+
+  // render() {
+    const updateTime = () =>{
+      time = new Date().toLocaleTimeString()
+      setTimes(time)
+    }
+    setInterval(updateTime, 1000)
     return (
       <>
-       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+       <nav id='keyfram'  className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">NewsMonkey</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,11 +36,25 @@ export class Navbar extends Component {
                     <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
                 </ul>
                 </div>
+                <div className='abc'>
+                <div id='keyfram' onClick={props.toggleMode}>
+                    <div className="form-check form-switch">
+                      <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                    </div>
+                  </div>
+                  <br />
+                <motion.div 
+                // initial={{ scale: 0 }}animate={{ rotate: 360, scale: 1 }}transition={{type: "spring",stiffness: 260,damping: 20}}
+                  whileHover={{ scale: 1.2, rotate: 360 }}whileTap={{scale: 0.8,rotate: -90,borderRadius: "100%"}}
+                  className=' text-white Cursor'>
+                  <button>{times}</button>
+                </motion.div>
+                </div>
             </div>
             </nav> 
       </>
     )
-  }
+  // }
 }
 
 export default Navbar

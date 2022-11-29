@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,29 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+.abc {
+  display: flex;
+}
+
+#keyfram{
+  animation-name: ratan;
+  animation-duration: 1s;
+}
+
+@keyframes ratan {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .abc{
+    display: none;
   }
 }
