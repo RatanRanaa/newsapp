@@ -44,6 +44,7 @@
 #keyfram{
   animation-name: ratan;
   animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes ratan {
@@ -55,8 +56,25 @@
   }
 }
 
+@keyframes movingTopToBottom {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+#divTAReviews {
+  animation: movingTopToBottom 1s ease ;
+  /* -webkit-animation: movingTopToBottom ease 1s ; */
+  position: relative;
+}
+
 @media screen and (max-width: 1000px) {
   .abc{
     display: none;
+  }
+  #keyfram{
+    position: static;
   }
 }
