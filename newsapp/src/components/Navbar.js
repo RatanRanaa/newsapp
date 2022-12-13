@@ -27,13 +27,13 @@ const Navbar = (props) => {
                     <Link className="nav-link" aria-current="page" to="/">Home</Link>
                     </li>
                     {/* <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li> */}
-                    <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/general">General</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
-                    <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/business">Business</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/general">General</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/health">Health</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/science">Science</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/sports">Sports</Link></li>
+                    <li className="nav-item" type="button"><Link className="nav-link" to="/technology">Technology</Link></li>
                 </ul>
                 </div>
                 <div className='abc'>
