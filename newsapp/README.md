@@ -1,12 +1,3 @@
- # git clone https://github.com/RatanRanaa/newsapp.git
- # cd folder_name
- git add .
- git commit -m "write git messages"
- git push origin master
-
-git pull origin master
- 
- 
  # Hi I'm Ratan Rana
 
 ## I'm a Front End Developer
@@ -37,5 +28,13 @@ All Categary Define in the Navbar
 Fully Responsive
 
 #
+ # git clone https://github.com/RatanRanaa/newsapp.git
+ # cd folder_name
+ git add .
+ git commit -m "write git messages"
+ git push origin master
 
+git pull origin master
+ 
+ 
 
