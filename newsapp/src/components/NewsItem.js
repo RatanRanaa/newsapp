@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export class NewsItem extends Component {
   render() {
+    //pass the data with this.props
     let {title, discription,imageUrl, newsUrl,author,date, source} = this.props
     return (
       <div className='my-3'>
