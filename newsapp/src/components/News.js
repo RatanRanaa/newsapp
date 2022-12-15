@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
-import Spinner from './Spinner'
+// import Spinner from './Spinner'
 import PropTypes from 'prop-types'
 
 
@@ -148,9 +148,9 @@ export default class News extends Component {
     return (
       <div className='container my-3'>
         <h1 id='divTAReviews' className=' text-center text-danger underline' style={{ margin: "35px 0px", marginTop: '90px'}}>NewsMonkey - Top Headlines {this.capitalizeFirstLetter(this.props.category)}</h1>
-        {this.state.loading && <Spinner/>}
+        {/* {this.state.loading && <Spinner/>} */}
         <div className="row">
-            {!this.state.loading && this.state.articles.map((element)=>{
+            {this.state.articles.map((element)=>{
                 return <div className="col-md-4" key={element.url} >
                     <NewsItem title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url}
                     author={element.author} date={element.publishedAt} source={element.source.name} />
